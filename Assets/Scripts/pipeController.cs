@@ -9,7 +9,6 @@ public class pipeController : MonoBehaviour
     public float destroyXPos = -6f;
     void Update()
     {
-          Debug.Log("Pipe Position X: " + transform.position.x);
         if(transform.position.x < destroyXPos){
             Destroy(gameObject);
         }
