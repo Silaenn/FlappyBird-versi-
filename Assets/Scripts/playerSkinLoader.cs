@@ -9,8 +9,17 @@ public class playerSkinLoader : MonoBehaviour {
 
     private const int DefaultSkinIndex = 0;
 
+    public Vector3 lastSkinScale = new Vector3(0.0865605f, 0.0865605f, 0.0865605f);
+    public Vector3 last2SkinScale = new Vector3(0.1089065f, 0.1089065f, 0.0865605f);
+
+    private int lastSkinIndex;
+    private int las2tSkinIndex;
+
     void Start() {
+        lastSkinIndex = SkinManager.Instance.skins.Length - 1;
+        las2tSkinIndex = SkinManager.Instance.skins.Length - 2;
         LoadSkin();
+
     }
 
     void LoadSkin() {
@@ -42,5 +51,17 @@ public class playerSkinLoader : MonoBehaviour {
                 Debug.LogError("No valid animator controller available.");
             }
         }
+        if (selectedSkinIndex == lastSkinIndex) {
+            transform.localScale = lastSkinScale;
+        }
+        else if(selectedSkinIndex == las2tSkinIndex){
+            transform.localScale = last2SkinScale;
+        }
+         else {
+            // Jika skin lain, gunakan scale default (1,1,1)
+            transform.localScale = new Vector3(4,4,4);
+        }
     }
+
+    
 }

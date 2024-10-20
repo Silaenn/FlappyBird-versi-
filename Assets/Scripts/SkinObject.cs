@@ -10,17 +10,7 @@ public class SkinObject : MonoBehaviour
     private void OnMouseDown() {
         skinManager.ChangeSkin(skinIndex);
         AudioSourcee.singleton.PlaySound(1); 
-    
-        SceneGame sceneGameInstance = FindObjectOfType<SceneGame>();
-
-         if (sceneGameInstance != null)
-        {
-            StartCoroutine(sceneGameInstance.LoadSceneWithSound("MainGame", 0.5f));
-        }
-        else
-        {
-            Debug.LogError("SceneGame not found in the scene!");
-        }
+        StartCoroutine(SceneGame.singleton.LoadSceneWithSound("MainGame", 0.5f));
     }
 
 }

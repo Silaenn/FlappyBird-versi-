@@ -252,6 +252,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a24406c09aa1b5947a2eea5cf3aaf736, type: 3}
   - {fileID: 8300000, guid: 81d00bd07ca7ef8469a93e82e760f4b9, type: 3}
   - {fileID: 8300000, guid: b11d3053c6dfc264abf707644fefc035, type: 3}
+  - {fileID: 8300000, guid: b9a4976260f164847b646b89ddf71771, type: 3}
 --- !u!4 &7495764
 Transform:
   m_ObjectHideFlags: 0
@@ -1484,7 +1485,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.6, y: 0.84, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 3.9999998, y: 3.9999998, z: 3.9999998}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -1527,8 +1528,11 @@ MonoBehaviour:
   - {fileID: 9100000, guid: 6aff7307368f43548b0df1b0a5a2b5f6, type: 2}
   - {fileID: 9100000, guid: 2eb726f85ec2e124e96b1928fe5f0413, type: 2}
   - {fileID: 9100000, guid: a4fd56fb08890f644abc96725b859d9e, type: 2}
+  - {fileID: 9100000, guid: b6e5c4d87928c8748ae87c49a9ae945b, type: 2}
+  - {fileID: 9100000, guid: 4590b631ca03b404c990333f7d0830a1, type: 2}
   defaultSprite: {fileID: 256444875, guid: c2d6c17c302b9b24f8d4cc22aa1b393d, type: 3}
   defaultAnimatorController: {fileID: 9100000, guid: 5ae24ab180839bb48bdca3c718a1349c, type: 2}
+  lastSkinScale: {x: 0.0865605, y: 0.0865605, z: 0.0865605}
 --- !u!1 &1115532152
 GameObject:
   m_ObjectHideFlags: 0

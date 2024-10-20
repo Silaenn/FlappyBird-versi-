@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 public class SceneGame : MonoBehaviour
 {
 
+ public static SceneGame singleton;
+
+ private void Awake() {
+    singleton = this;
+ }
+
 public void StartGame()
 {
     AudioSourcee.singleton.PlaySound(1); 
@@ -20,6 +26,5 @@ public IEnumerator LoadSceneWithSound(string sceneName, float delay)
 {
     yield return new WaitForSeconds(delay); 
     SceneManager.LoadScene(sceneName);
-    DontDestroyOnLoad(gameObject);
 }
 }

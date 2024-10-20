@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,6 +11,8 @@ public class playerController : MonoBehaviour
     public int score, hiScore;
     public Text scoreUI, hiScoreUI;
     string HISCORE = "HISCORE";
+
+    bool lose = false;
      private void Awake() {
         rb = GetComponent<Rigidbody2D>();
     }
@@ -17,23 +20,25 @@ public class playerController : MonoBehaviour
     {
         hiScore = PlayerPrefs.GetInt(HISCORE);
     }
-    // Update is called once per frame
+
     void Update()
     {
         PlayerJump();
     }
 
     void PlayerJump(){
-        if (Input.GetMouseButtonDown(0)){
+        if (Input.GetMouseButtonDown(0) && !lose){
             rb.velocity = Vector2.up * jumpForce;
             AudioManager.singleton.PlaySound(0);
         }
     }
 
     void PlayerLose(){
+        lose = true;
         if(score > hiScore){
+          lose = false;
           scoreUI.enabled = false;
-          hiScore = score;
+          hiScore = score;  
           PlayerPrefs.SetInt(HISCORE, hiScore);
         }
         AudioManager.singleton.PlaySound(1);
@@ -42,11 +47,18 @@ public class playerController : MonoBehaviour
         Time.timeScale = 0;
     }
 
-    public void RestartGame(){
-        Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        scoreUI.enabled = true;
-    }
+   public void RestartGame(){
+    AudioManager.singleton.PlaySound(3);
+    StartCoroutine(RestartAfterDelay(0.5f));  // Tambahkan delay sebelum reload
+}
+
+    IEnumerator RestartAfterDelay(float delay){
+    yield return new WaitForSecondsRealtime(delay); // Tunggu beberapa waktu sebelum memuat ulang scene
+    Time.timeScale = 1;
+    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    scoreUI.enabled = true;
+    lose = false;
+}
 
     void AddScore(){
         AudioManager.singleton.PlaySound(2);
@@ -55,8 +67,15 @@ public class playerController : MonoBehaviour
     }
 
     public void BackToMenu(){
-        SceneManager.LoadScene("MainMenu");
-    }
+    AudioManager.singleton.PlaySound(3);
+    StartCoroutine(BackToMenuAfterDelay(0.5f));  // Tambahkan delay sebelum ke menu
+}
+
+    IEnumerator BackToMenuAfterDelay(float delay){
+    yield return new WaitForSecondsRealtime(delay); // Tunggu beberapa waktu sebelum memuat ulang scene
+    Time.timeScale = 1;
+    SceneManager.LoadScene("MainMenu");
+}
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.collider.CompareTag("Obstacle")){
