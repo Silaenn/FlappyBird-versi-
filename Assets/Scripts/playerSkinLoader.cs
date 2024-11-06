@@ -5,7 +5,7 @@ public class playerSkinLoader : MonoBehaviour {
     public Animator playerAnimator;
     public RuntimeAnimatorController[] animatorControllers;
     public Sprite defaultSprite;
-    public RuntimeAnimatorController defaultAnimatorController;
+    public RuntimeAnimatorController defaultAnimatorController; 
 
     private const int DefaultSkinIndex = 0;
 
@@ -13,18 +13,32 @@ public class playerSkinLoader : MonoBehaviour {
     public Vector3 last2SkinScale = new Vector3(0.1089065f, 0.1089065f, 0.0865605f);
 
     private int lastSkinIndex;
-    private int las2tSkinIndex;
+    private int last2SkinIndex;
 
     void Start() {
-        lastSkinIndex = SkinManager.Instance.skins.Length - 1;
-        las2tSkinIndex = SkinManager.Instance.skins.Length - 2;
+        lastSkinIndex = SkinManager.Instance.skins.Length - 2;
+        last2SkinIndex = SkinManager.Instance.skins.Length;
         LoadSkin();
-
     }
 
     void LoadSkin() {
         int selectedSkinIndex = PlayerPrefs.GetInt("SelectedSkin", DefaultSkinIndex);
 
+        // Cek indeks skin dan atur skala sesuai kebutuhan
+        if (selectedSkinIndex == 0) {
+            // Untuk skin pertama (index 0), gunakan skala lastSkinScale
+            transform.localScale = lastSkinScale;
+        } 
+        else if (selectedSkinIndex == 2) {
+            // Untuk skin ketiga (index 2), gunakan skala last2SkinScale
+            transform.localScale = last2SkinScale;
+        } 
+        else {
+            // Untuk skin lainnya, gunakan skala default
+            transform.localScale = new Vector3(3, 3, 3);
+        }
+
+        // Set sprite skin
         if (SkinManager.Instance != null && SkinManager.Instance.skins != null) {
             if (selectedSkinIndex >= 0 && selectedSkinIndex < SkinManager.Instance.skins.Length) {
                 playerRenderer.sprite = SkinManager.Instance.skins[selectedSkinIndex];
@@ -40,6 +54,7 @@ public class playerSkinLoader : MonoBehaviour {
             }
         }
 
+        // Set animator controller sesuai dengan skin yang dipilih
         if (selectedSkinIndex >= 0 && selectedSkinIndex < animatorControllers.Length) {
             playerAnimator.runtimeAnimatorController = animatorControllers[selectedSkinIndex];
         } else {
@@ -51,17 +66,5 @@ public class playerSkinLoader : MonoBehaviour {
                 Debug.LogError("No valid animator controller available.");
             }
         }
-        if (selectedSkinIndex == lastSkinIndex) {
-            transform.localScale = lastSkinScale;
-        }
-        else if(selectedSkinIndex == las2tSkinIndex){
-            transform.localScale = last2SkinScale;
-        }
-         else {
-            // Jika skin lain, gunakan scale default (1,1,1)
-            transform.localScale = new Vector3(4,4,4);
-        }
     }
-
-    
 }

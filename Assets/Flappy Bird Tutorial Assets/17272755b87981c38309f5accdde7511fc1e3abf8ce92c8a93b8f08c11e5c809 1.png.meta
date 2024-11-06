@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c67de5bfa3cb68c40833c1a24a46464f
+guid: aee387c4ebdddc84895d676fc7f88a7a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,70 +121,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Buwung_0
-      rect:
-        serializedVersion: 2
-        x: 2105
-        y: 2715
-        width: 1293
-        height: 927
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 56d648eac79028a42bfc40c63f16943d
-      internalID: 1757195260
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buwung_7
-      rect:
-        serializedVersion: 2
-        x: 2248
-        y: 1366
-        width: 1300
-        height: 982
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a9f69d5a980e06409e83f01e400030c
-      internalID: 994585773
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buwung_11
-      rect:
-        serializedVersion: 2
-        x: 2265
-        y: 701
-        width: 1294
-        height: 400
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 48818e94a82d71e4887968e15e92382f
-      internalID: 1704004403
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -195,25 +132,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Buwung_0: 1757195260
-      Buwung_1: -1128660572
-      Buwung_10: 2085311989
-      Buwung_11: 1704004403
-      Buwung_12: 1405158791
-      Buwung_13: 1744886287
-      Buwung_14: -1706670067
-      Buwung_15: -743203469
-      Buwung_16: 1399595345
-      Buwung_17: 1520172834
-      Buwung_2: 341039916
-      Buwung_3: -2019365605
-      Buwung_4: 930339745
-      Buwung_5: 1357748260
-      Buwung_6: 2082581286
-      Buwung_7: 994585773
-      Buwung_8: 48558184
-      Buwung_9: -788279990
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
