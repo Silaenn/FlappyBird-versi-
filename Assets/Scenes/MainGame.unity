@@ -293,7 +293,7 @@ RectTransform:
   m_GameObject: {fileID: 22814748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1538996, y: 1.1538996, z: 1.1538996}
+  m_LocalScale: {x: 1.0151893, y: 1.0151893, z: 1.0151893}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 97716815}
@@ -1118,14 +1118,14 @@ RectTransform:
   m_GameObject: {fileID: 1004049698}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.80908, y: 0.80908, z: 0.80908}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1417029759}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000038147, y: 214}
+  m_AnchoredPosition: {x: 0.0000043122, y: 214}
   m_SizeDelta: {x: 366.469, y: 98.9846}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1004049700
@@ -1526,8 +1526,8 @@ MonoBehaviour:
   - {fileID: 9100000, guid: 4590b631ca03b404c990333f7d0830a1, type: 2}
   - {fileID: 9100000, guid: a4fd56fb08890f644abc96725b859d9e, type: 2}
   - {fileID: 9100000, guid: b6e5c4d87928c8748ae87c49a9ae945b, type: 2}
-  defaultSprite: {fileID: 1788095305, guid: 064446bf17ccd804793ad6027d92d526, type: 3}
-  defaultAnimatorController: {fileID: 9100000, guid: a4fd56fb08890f644abc96725b859d9e, type: 2}
+  defaultSprite: {fileID: -822526682, guid: 4d6ce2d2f1b9258408d6971e34b08a97, type: 3}
+  defaultAnimatorController: {fileID: 9100000, guid: 4590b631ca03b404c990333f7d0830a1, type: 2}
   lastSkinScale: {x: 0.0865605, y: 0.0865605, z: 0.0865605}
   last2SkinScale: {x: 0.1089065, y: 0.1089065, z: 0.0865605}
 --- !u!1 &1115532152

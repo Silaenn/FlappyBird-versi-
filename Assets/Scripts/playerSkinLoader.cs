@@ -16,8 +16,10 @@ public class playerSkinLoader : MonoBehaviour {
     private int last2SkinIndex;
 
     void Start() {
-        lastSkinIndex = SkinManager.Instance.skins.Length - 2;
-        last2SkinIndex = SkinManager.Instance.skins.Length;
+        if(SkinManager.Instance != null){
+         lastSkinIndex = SkinManager.Instance.skins.Length - 2;
+         last2SkinIndex = SkinManager.Instance.skins.Length;
+        } 
         LoadSkin();
     }
 
