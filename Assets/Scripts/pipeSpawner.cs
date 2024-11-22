@@ -15,8 +15,9 @@ public class pipeSpawner : MonoBehaviour
 
 
    IEnumerator SpawnPipeCoroutine(){
+    while(true){
     yield return new WaitForSeconds(spawnTime);
     Instantiate(pipe, transform.position + Vector3.up * Random.Range(yPosMin, yPosMax), Quaternion.identity);
-    StartCoroutine(SpawnPipeCoroutine());
+   }
    }
 }
