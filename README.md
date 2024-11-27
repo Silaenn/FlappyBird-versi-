@@ -15,3 +15,5 @@ About This Game
 This game was developed as a portfolio project to demonstrate the ability to create and design simple horror games. Challenge yourself to control a scary bird and see how far you can survive!
 
 Credits: background music by Pixabay.
+
+Download now at : https://silaenn.itch.io/flap-of-fear
